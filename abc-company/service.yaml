@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: product-handling
+spec:
+  type: LoadBalancer
+  selector:
+    app: acb-company
+  ports:
+  - protocol: "TCP"
+    port: 5100
+    targetPort: 5100
+  

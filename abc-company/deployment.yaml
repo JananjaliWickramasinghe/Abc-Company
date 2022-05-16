@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: abc-company-deployment 
+  labels:
+    app: acb-company
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: acb-company
+  template:
+    metadata:
+      labels:
+        app: acb-company
+    spec:
+      containers:
+      - name: acb-company
+        image: jananjali28/abccompany
+        ports:
+        - containerPort: 5100
